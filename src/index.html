@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script>
+    System.config({
+      packages: {'app': {}},
+      map: {app: 'js'}
+    });
+    System.import('app/app').catch(function(e) { console.error(e); });
+  </script>
+</head>
+<body>
+  <div ng-controller="MyCtrl as ctrl">
+    {{ctrl.value}}
+  </div>
+</body>
